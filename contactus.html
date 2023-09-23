@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Apply a simple style to the header */
+        header {
+            background-color: #447786;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Style the teacher list container */
+        .teacher-list {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Style the teacher cards */
+        .teacher-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the teacher name */
+        .teacher-name {
+            font-weight: bold;
+        }
+
+        /* Style the teacher email */
+        .teacher-email {
+            color: #007BFF;
+        }
+
+        /* Style the button */
+        .show-details-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        /* Hide teacher details by default */
+        .teacher-details {
+            display: none;
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <div class="teacher-list">
+        <div class="teacher-card">
+            <p class="teacher-name">DR. GUNJAN BHARDWAJ</p>
+            <p class="teacher-email">gunjan@gndec.ac.in</p>
+            <button class="show-details-button" onclick="toggleDetails('teacher1')">Show Details</button>
+            <div class="teacher-details" id="teacher1">
+                <p><strong>Details for DR. GUNJAN BHARDWAJ</strong></p>
+                <p>Office: Sports Complex</p>
+                <p>Office Hours: Monday and Wednesday, 2:00 PM - 4:00 PM</p>
+            </div>
+        </div>
+        <div class="teacher-card">
+            <p class="teacher-name">SUMINDER SINGH</p>
+            <p class="teacher-email">dhiman.0044@yahoo.com</p>
+            <button class="show-details-button" onclick="toggleDetails('teacher2')">Show Details</button>
+            <div class="teacher-details" id="teacher2">
+                <p><strong>Details for SUMINDER SINGH </strong></p>
+                <p>Office: Sports Complex</p>
+                <p>Office Hours: Thursday and Friday, 12:00 PM - 4:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Add more teacher cards as needed -->
+    </div>
+
+    <footer>
+        <p>&copy; 2023 GNDEC Sports Department</p>
+    </footer>
+
+    <script>
+        // Function to toggle teacher details visibility
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
